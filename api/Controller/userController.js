@@ -49,7 +49,6 @@ export const createUser = async (req, res, next) => {
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password)
   if (!email || !password)
     //|| !file
     return next(new ErrorHandler("Please enter all field", 400));
