@@ -24,9 +24,11 @@ const LoginPage = () => {
       const res = await fetch('http://localhost:5000/api/v1/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "*",
+        'Content-Type': 'application/json',
+         "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH"
         },
-        credentials: "include",
         body: JSON.stringify(input),
       });
       const data = await res.json();
