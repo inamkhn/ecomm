@@ -20,7 +20,7 @@ const corsOptions ={
     optionSuccessStatus: 200,
 }
 
-app.use(cors())
+app.use(cors(corsOptions))
 dotenv.config()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -35,9 +35,6 @@ app.use(express.static(path.join(__dirname, '/client/dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 })
-
-
-
 
 app.listen(5000,(req,res)=>{
     connect()
