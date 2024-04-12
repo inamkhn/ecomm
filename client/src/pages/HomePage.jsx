@@ -100,7 +100,7 @@ const HomePage = () => {
             return (
               <>
                 <Col sm={12} md={6} lg={4} xl={3} className=" p-2">
-                  <Product key={item._id} Product={...item} />
+                  <Product key={item._id} Product={item} />
                 </Col>
               </>
             );
